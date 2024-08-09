@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	 <title>SPlat</title>
+	  <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Unbounded:wght@300&display=swap" rel="stylesheet">
+                <link rel="stylesheet" type="text/css" href="../style.css" />
+     
+ </head>
+  
+   <body>
+   <div class="container1">
+      
+       <header class="header">
+          
+           <a href="#" class="logo">старт 01.09</a>
+           
+               <input type="checkbox" id="check">
+                    <label for="check"class="icons"> 
+                           <i class='icon' id="menu-icon" ><img src="burger.png"></i>
+                           <i class='iconx' id="close-icon"><img src="close.png"></i>
+                    </label>     
+                           <nav class="nav">
+                               <a href="#" style="--i:0;">програма</a>
+                               <a href="#" style="--i:1;">дорожня карта</a>
+                               <a href="#" style="--i:2;">про автора</a>
+                               <a href="#" style="--i:3;">контакти</a>
+                                
+                           </nav>
+           
+       </header>
+        </div> 
+       
+                                           
+
+                                         
+  <style>
+      body
+            {
+            background-color: rgba(0, 0, 0, 0);
+            margin: 0;
+            padding:0;
+            height:100vh auto; 
+            }
+ 
+      .header{
+          position:relative;
+          background:;
+          padding: 2rem 10%;
+          display:flex;
+          justify-content:space-between;
+          align-items: center;
+          z-index: 100;
+      }
+      .logo{
+          font-size:1.2rem;
+          text-decoration: none;
+          font-family: Unbounded;
+          color:#fff;
+          
+      }
+      .nav a{
+          text-decoration: none;
+          font-family: Unbounded;
+          color:#fff;
+          font-size:1.2rem;
+          margin-left:3.5rem;
+      } 
+      
+      #check{
+          display:none;
+      }
+      .icons{
+          
+          display:none;
+          position:absolute;
+          right:5%;
+          display:none;
+      }
+/*    QUERIES  */
+@media screen and (max-width:947px) 
+{
+    .header{
+        padding: 1rem 5%;
+        background:rgba(0, 0, 0, .1);
+        backdrop-filter:blur(10px);
+        box-shadow:0 /5rem 1rem rgba(0, 0, 0, .1);
+    }
+
+}
+      @media screen and (max-width:838px) 
+{
+    .icons{
+        display:inline-flex;
+        
+    }
+    #check:checked~.icons #menu-icon {
+        display:none;
+    }
+    #check:checked~.icons #close-icon {
+        display:block;
+    }
+    .icons #close-icon{
+        display:none;
+    }
+    .nav{
+        position:absolute;
+        top:100%;
+        left:0;
+        height:0;
+        width:100%;
+        overflow:hidden;
+        transition: .3s ease;
+        background:rgba(0, 0, 0, .1);
+        backdrop-filter:blur(10px);
+        box-shadow:0 /5rem 1rem rgba(0, 0, 0, .1);
+    }
+    
+    #check:checked~.nav {
+        height:17rem;
+    }
+    .nav a{
+        display:block;
+        margin:1.5rem 0;
+        text-align:center;
+        transform:translateY(-50px);
+        transition: .3s ease;
+        opacity: 0;
+    }
+    #check:checked~.nav a{
+        opacity:1;
+        transform:translateY(0);
+        transition-delay: calc(.10s * var(--i));
+    }
+
+} 
+      .container1 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7),
+                       rgba(0, 0, 0, 0.1)), url(firstblock.jpg);
+            background-repeat: no-repeat;
+            height:40rem;
+            background-size:cover;
+
+  
+
+      }
+      
+     </style>
+     
+     
+     
+     
+     
+     
+     
+     <script>
+         
+         
+             
+  
+    </script>
+   
+    </body>
+</html>
